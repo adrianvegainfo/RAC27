@@ -1,0 +1,302 @@
+﻿<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Propuestas desde Catalunya / Antic Teatre 2026-2027</title>
+<style>
+  :root{
+    --yellow:#fbff1f;
+    --blue:#0600ff;
+    --ink:#050505;
+    --paper:#fff;
+  }
+  *{box-sizing:border-box}
+  html{background:var(--yellow);scroll-behavior:smooth}
+  body{margin:0;background:var(--yellow);color:var(--ink);font-family:Helvetica,Arial,sans-serif;line-height:1.3;letter-spacing:0}
+  a{color:inherit;text-decoration:none}
+  .page{max-width:1120px;margin:0 auto;background:var(--paper);min-height:100vh;padding:28px 34px 58px}
+  .topbar{display:flex;justify-content:space-between;align-items:flex-start;gap:28px;margin-bottom:42px}
+  .logo{width:300px;transform:rotate(-1.5deg);filter:drop-shadow(8px 8px 0 #fff) drop-shadow(10px 10px 0 var(--ink))}
+  .logo img{display:block;width:100%;height:auto;border:3px solid var(--ink);background:var(--yellow)}
+  .header-note{text-align:right;max-width:560px;color:var(--blue);font-size:15px;line-height:1.15;font-weight:900;font-style:italic;text-transform:uppercase;padding-top:4px}
+  .cover{padding:34px 0 48px;border-top:6px solid var(--blue);border-bottom:6px solid var(--blue);margin-bottom:34px}
+  .eyebrow{color:var(--blue);font-weight:900;font-style:italic;text-transform:uppercase;font-size:17px;margin-bottom:14px}
+  h1{font-size:42px;line-height:.95;margin:0 0 18px;text-transform:uppercase;font-weight:900;letter-spacing:0;max-width:900px}
+  .intro{font-size:22px;max-width:930px;margin:0 0 36px}
+  .summary-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:32px}
+  .summary-card{display:block;border:3px solid var(--blue);padding:18px 14px 20px;min-height:190px;background:#fff;transform:skew(-5deg)}
+  .summary-card > *{transform:skew(5deg)}
+  .summary-card h3{font-size:15px;line-height:1;margin:0 0 10px;color:var(--blue);text-transform:uppercase;font-style:italic;font-weight:900}
+  .summary-card p{font-size:13px;margin:0;font-weight:700}
+  .summary-card:hover{background:var(--yellow)}
+  .summary-card .num{display:block;color:var(--ink);font-size:11px;text-transform:uppercase;margin-bottom:8px;font-weight:900}
+  .proposal{border-top:8px solid var(--blue);padding:34px 0 44px;scroll-margin-top:22px}
+  .hero-image{width:100%;background:#fff;display:flex;align-items:center;justify-content:center;overflow:hidden;margin-bottom:24px}
+  .hero-image img{width:100%;max-height:620px;object-fit:contain;display:block;background:#fff}
+  .proposal-head{display:grid;grid-template-columns:1fr auto;gap:18px;align-items:start;margin-bottom:15px}
+  h2{font-size:48px;line-height:.92;margin:0;text-transform:uppercase;font-weight:900;color:var(--blue);font-style:italic;letter-spacing:0}
+  .artist{font-size:18px;margin:8px 0 0;text-transform:uppercase;font-weight:900}
+  .tags{display:flex;flex-wrap:wrap;gap:8px;justify-content:flex-end;max-width:450px}
+  .tag{background:var(--yellow);border:2px solid var(--ink);padding:7px 10px;font-size:12px;text-transform:uppercase;font-weight:900;font-style:italic;transform:skew(-8deg)}
+  .tag span{display:block;transform:skew(8deg)}
+  .body{display:grid;grid-template-columns:1fr 1fr;gap:26px;align-items:start}
+  .body p{font-size:18px;margin:0 0 14px}
+  .take{background:var(--yellow);border-left:10px solid var(--blue);padding:16px 18px;font-size:18px;font-weight:700;margin:0}
+  .materials-title{font-size:18px;text-transform:uppercase;color:var(--blue);font-style:italic;font-weight:900;margin:0 0 12px}
+  .links{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+  .links a{display:block;border:2px solid var(--blue);padding:11px 12px;background:#fff;font-size:14px;font-weight:900;color:var(--blue);font-style:italic;transform:skew(-7deg)}
+  .links a span{display:block;transform:skew(7deg)}
+  .links strong{color:var(--ink);font-style:normal}
+  .contact-block{margin-top:18px;padding-top:12px;border-top:2px solid var(--ink)}
+  .contact-title{font-size:12px;text-transform:uppercase;color:var(--ink);font-style:italic;font-weight:900;margin:0 0 9px}
+  .contact-links{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+  .contact-links a,.contact-links span{display:block;border:1px solid var(--ink);padding:7px 8px;background:var(--yellow);font-size:11px;font-weight:900;color:var(--ink);font-style:italic;text-transform:uppercase;transform:skew(-7deg)}
+  .contact-links a em,.contact-links span em{display:block;transform:skew(7deg);font-style:normal;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .mini-nav{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin-top:30px;padding-top:16px;border-top:2px solid var(--blue)}
+  .mini-col{display:grid;grid-template-rows:repeat(3,1fr);gap:7px}
+  .mini-nav a{display:block;min-width:0;border:1px solid var(--blue);color:var(--blue);background:#fff;padding:5px 7px;font-size:10px;text-transform:uppercase;font-weight:900;font-style:italic;text-align:center;transform:skew(-8deg)}
+  .mini-nav span{display:block;transform:skew(8deg);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .mini-nav a:hover{background:var(--yellow);color:var(--ink);border-color:var(--ink)}
+  .mini-nav .nav-arrow{font-size:13px;line-height:1}
+  .footer{margin-top:36px;border-top:4px solid var(--blue);padding-top:18px;display:flex;justify-content:space-between;font-size:12px;text-transform:uppercase;color:var(--blue);font-weight:900;font-style:italic}
+  @media (max-width:850px){
+    .topbar,.proposal-head,.body{display:block}
+    .summary-grid,.links,.contact-links{grid-template-columns:1fr}
+    .header-note{text-align:left;margin-top:28px}
+    .tags{justify-content:flex-start;margin-top:14px}
+    .page{padding:22px}
+    h2{font-size:36px}
+    h1{font-size:34px}
+  }
+</style>
+</head>
+<body>
+<main class="page" id="top">
+  <header class="topbar">
+    <div class="logo" aria-label="Antic Teatre Espai de Creacio">
+      <img src="assets/logo_antic_oficial.jpg" alt="Antic Teatre Espai de Creacio">
+    </div>
+    <div class="header-note">Recomendaciones / Temporada 2026-2027 / Propuestas desde Catalunya / posibles dialogos de programacion para Antic Teatre</div>
+  </header>
+
+  <section class="cover">
+    <div class="eyebrow">Propuestas recomendadas</div>
+    <h1>Desde Catalunya, con afinidad Antic</h1>
+    <p class="intro">Selección de piezas locales que trabajan cuerpo, archivo, instalación, oscuridad, fiesta, circo híbrido, conferencia performativa y nuevas dramaturgias. Esta versión es una primera maqueta: los textos de recomendación están abiertos para ajustarlos después de la revisión.</p>
+    <div class="summary-grid">
+      <a class="summary-card" href="#ines"><span class="num">01</span><h3>Inés Sybille</h3><p>Agua, archivo, diáspora, vudú haitiano y memoria motriz. La candidata principal sería Simbi en aguas astronómicas.</p></a>
+      <a class="summary-card" href="#raquel"><span class="num">02</span><h3>Raquel Klein</h3><p>Oscuridad, instalación coreográfica, percepción expandida y temporalidad suspendida. Requiere revisar condiciones técnicas de black out.</p></a>
+      <a class="summary-card" href="#andrea"><span class="num">03</span><h3>Andrea El Ameri</h3><p>Dislocadas como nueva creación; DOMA como trabajo anterior para entender potencia, cuerpo e imaginario.</p></a>
+      <a class="summary-card" href="#ket"><span class="num">04</span><h3>KET</h3><p>Circo contemporáneo, amistad, trapecio compartido, escritura en vivo, cuerpo-pantalla e imaginario pop.</p></a>
+      <a class="summary-card" href="#alina"><span class="num">05</span><h3>Alina Sokulska</h3><p>Conferencia performativa, Borges, ADN, archivo, exilio, acumulación de información y cuerpo liminal.</p></a>
+      <a class="summary-card" href="#patricio"><span class="num">06</span><h3>Patricio Suárez</h3><p>Artes vivas, teatro, danza e instalación contra el aislamiento neoliberal. Pieza con más peso textual.</p></a>
+    </div>
+  </section>
+
+  <section class="proposal" id="ines">
+    <div class="hero-image"><img src="assets/ines.jpg" alt="Simbi en aguas astronómicas - Inés Sybille"></div>
+    <div class="proposal-head">
+      <div><h2>Simbi en aguas astronómicas</h2><div class="artist">Inés Sybille Vooduness</div></div>
+      <div class="tags"><span class="tag"><span>Barcelona / Catalunya</span></span><span class="tag"><span>Archivo y diáspora</span></span><span class="tag"><span>Cuerpo, agua y stream</span></span></div>
+    </div>
+    <div class="body">
+      <div>
+        <p>Simbi es una familia de divinidades del vudú haitiano vinculadas a puntos de agua y manantiales. La pieza conecta el arroyo con el stream digital y construye un archivo híbrido, coreográfico, analógico, sonoro y familiar que piensa territorio, diáspora y memoria motriz.</p>
+        <p>Inés trabaja desde una práctica situada entre danza, investigación, tecnopoéticas negras, espiritualidad, archivo y mutación. También incluyo Santa de sustrato autónomo como recorrido anterior.</p>
+        <p class="take">Texto provisional de recomendación: me interesa por cómo une cuerpo, agua, archivo y espiritualidad sin perder una potencia escénica muy contemporánea. Revisar si presentamos Simbi como pieza principal y Santa como contexto.</p>
+      </div>
+      <div>
+        <div class="materials-title">Materiales encontrados</div>
+        <div class="links">
+          <a href="materials/ines-simbi-dossier.pdf"><span><strong>Dossier</strong> / Simbi</span></a>
+          <a href="https://drive.google.com/file/d/1alu_5lpRVJTuKjjVxH0ALKs_vsBtw4QO/view?usp=drivesdk"><span><strong>Video completo</strong> / Simbi</span></a>
+          <a href="https://drive.google.com/file/d/14oE4NRHRXqbEsw9wKew3xNzsoHsNMh6o/view"><span><strong>Trailer</strong> / Simbi</span></a>
+          <a href="https://drive.google.com/file/d/12nXJnxYv51RLuxGYYWfx7HEO_LtXZHW1/view?usp=drivesdk"><span><strong>Fragmentos</strong> / detalle</span></a>
+          <a href="materials/ines-santa-dossier.pdf"><span><strong>Dossier</strong> / Santa de sustrato</span></a>
+          <a href="https://www.youtube.com/watch?v=hd8_Eo0xFyk"><span><strong>Trailer</strong> / Santa</span></a>
+        </div>
+        <div class="contact-block"><div class="contact-title">Contacto y enlaces</div><div class="contact-links">
+          <a href="mailto:vooduness@gmail.com"><em>Inés / email</em></a>
+          <a href="https://linktr.ee/vooduness"><em>Linktree</em></a>
+          <a href="https://www.instagram.com/vooduness/"><em>@vooduness</em></a>
+          <a href="https://mail.google.com/mail/#all/19da97b034fa148c"><em>Correo original</em></a>
+        </div></div>
+      </div>
+    </div>
+    <nav class="mini-nav"><div class="mini-col"><a href="#ines"><span>Inés</span></a><a href="#ket"><span>KET</span></a><a class="nav-arrow" href="#top"><span>&#8593;&#8593; Inicio</span></a></div><div class="mini-col"><a href="#raquel"><span>Raquel</span></a><a href="#alina"><span>Alina</span></a><a class="nav-arrow" href="#top"><span>&#8593; Anterior</span></a></div><div class="mini-col"><a href="#andrea"><span>Andrea</span></a><a href="#patricio"><span>Patricio</span></a><a class="nav-arrow" href="#raquel"><span>&#8595; Siguiente</span></a></div></nav>
+  </section>
+
+  <section class="proposal" id="raquel">
+    <div class="hero-image"><img src="assets/raquel.jpg" alt="Negro Luz - Raquel Klein"></div>
+    <div class="proposal-head">
+      <div><h2>Negro Luz</h2><div class="artist">Raquel Klein</div></div>
+      <div class="tags"><span class="tag"><span>Barcelona / Catalunya</span></span><span class="tag"><span>Instalación coreográfica</span></span><span class="tag"><span>Oscuridad y percepción</span></span></div>
+    </div>
+    <div class="body">
+      <div>
+        <p>Negro Luz es una instalación coreográfica que explora la oscuridad como materia escénica y espacio de percepción expandida. Trabaja con luz de muy baja intensidad, paisajes sonoros inmersivos, microvariación del gesto y temporalidad suspendida.</p>
+        <p>La pieza puede activarse en teatros y espacios no convencionales, como pieza larga o instalación con activaciones. El punto técnico sensible es la posibilidad real de oscuridad.</p>
+        <p class="take">Texto provisional de recomendación: la vi en Dansa Metropolitana y creo que en Antic podría funcionar mejor que en formato frontal. Me interesa por la contemplación, la ausencia, la repetición y la relación entre cuerpo, espacio y mirada.</p>
+      </div>
+      <div>
+        <div class="materials-title">Materiales encontrados</div>
+        <div class="links">
+          <a href="materials/raquel-negro-luz-dossier.pdf"><span><strong>Dossier</strong> / Negro Luz</span></a>
+          <a href="https://drive.google.com/file/d/1mTAbX6h5O5XjA0czH7uaQ7T1yP3rdINE/view"><span><strong>Video obra</strong> / Drive</span></a>
+          <a href="https://drive.google.com/file/d/1g591FuSDKnqmCVrPH5SUMFqv_2wdi36n/view"><span><strong>Video corto</strong> / 01</span></a>
+          <a href="https://drive.google.com/file/d/1J1XAFxY36KLf7hiSf2JPC7v_uidw8p76/view"><span><strong>Video corto</strong> / 02</span></a>
+          <a href="https://drive.google.com/file/d/1wEaP-puWVeRj6Bct9VpKncoRAbPAfQQg/view"><span><strong>Video corto</strong> / 03</span></a>
+          <a href="https://drive.google.com/file/d/1d-NqvY-cpHYAiVi2R7SoqsmDbhRTcKn9/view"><span><strong>Video corto</strong> / 04</span></a>
+        </div>
+        <div class="contact-block"><div class="contact-title">Contacto y enlaces</div><div class="contact-links">
+          <a href="mailto:rakleintorrens@gmail.com"><em>Raquel / email</em></a>
+          <a href="tel:+34647634500"><em>+34 647 634 500</em></a>
+          <a href="https://mail.google.com/mail/#all/19e8ded6db0fbbf1"><em>Correo original</em></a>
+        </div></div>
+      </div>
+    </div>
+    <nav class="mini-nav"><div class="mini-col"><a href="#ines"><span>Inés</span></a><a href="#ket"><span>KET</span></a><a class="nav-arrow" href="#top"><span>&#8593;&#8593; Inicio</span></a></div><div class="mini-col"><a href="#raquel"><span>Raquel</span></a><a href="#alina"><span>Alina</span></a><a class="nav-arrow" href="#ines"><span>&#8593; Anterior</span></a></div><div class="mini-col"><a href="#andrea"><span>Andrea</span></a><a href="#patricio"><span>Patricio</span></a><a class="nav-arrow" href="#andrea"><span>&#8595; Siguiente</span></a></div></nav>
+  </section>
+
+  <section class="proposal" id="andrea">
+    <div class="hero-image"><img src="assets/andrea.jpg" alt="DISLOCADAS - Andrea El Ameri"></div>
+    <div class="proposal-head">
+      <div><h2>DISLOCADAS: una fiesta móvil</h2><div class="artist">Andrea El Ameri / Inés Sybille</div></div>
+      <div class="tags"><span class="tag"><span>Barcelona / Catalunya</span></span><span class="tag"><span>Danza y escena híbrida</span></span><span class="tag"><span>Fiesta, identidad y archivo</span></span></div>
+    </div>
+    <div class="body">
+      <div>
+        <p>Proyecto en creación que explora la identidad a través del cuerpo y de las prácticas de danza como archivo vivo de memorias culturales. Cruza las raíces marroquíes y andaluzas de Andrea con las raíces haitianas y catalanas de Inés, junto con waacking, house, popping, kuduro y coupé-décalé.</p>
+        <p>DOMA funciona como material anterior para entender su potencia escénica y su lenguaje corporal. DISLOCADAS aparece como la apuesta más nueva y posiblemente más afín al contexto Antic.</p>
+        <p class="take">Texto provisional de recomendación: me interesa por la potencia del cuerpo, la fiesta como dispositivo y el cruce de genealogías de movimiento. También porque junta a Andrea e Inés, generando un ecosistema local muy interesante.</p>
+      </div>
+      <div>
+        <div class="materials-title">Materiales encontrados</div>
+        <div class="links">
+          <a href="materials/andrea-dislocadas-dossier.pdf"><span><strong>Dossier</strong> / DISLOCADAS</span></a>
+          <a href="https://drive.google.com/file/d/1XxmI4p_J4UZSDGEJwtuOTmYBcd9KS-Vw/view?usp=sharing"><span><strong>Video completo</strong> / DOMA</span></a>
+          <a href="https://drive.google.com/file/d/1HinDeXKlwIcHbt32-i51Gokfq9wHLg8j/view?usp=sharing"><span><strong>Teaser</strong> / DOMA</span></a>
+          <a href="https://youtu.be/vgovRotkjwE"><span><strong>Video proceso</strong> / DISLOCADAS 01</span></a>
+          <a href="https://youtu.be/BrQzmqKIqJI"><span><strong>Video proceso</strong> / DISLOCADAS 02</span></a>
+          <a href="https://www.andreaelameri.net/es/"><span><strong>Web</strong> / Andrea</span></a>
+        </div>
+        <div class="contact-block"><div class="contact-title">Contacto y enlaces</div><div class="contact-links">
+          <a href="mailto:andreaelameri@gmail.com"><em>Andrea / email</em></a>
+          <a href="mailto:mariarueda@laikonica.com"><em>Maria Rueda / email</em></a>
+          <a href="tel:+34627461240"><em>+34 627 461 240</em></a>
+          <a href="https://www.instagram.com/andreaelameri/"><em>@andreaelameri</em></a>
+          <a href="https://www.laikonica.com/"><em>Laikonica</em></a>
+          <a href="https://mail.google.com/mail/#all/19e35f1bd9d62824"><em>Correo original</em></a>
+        </div></div>
+      </div>
+    </div>
+    <nav class="mini-nav"><div class="mini-col"><a href="#ines"><span>Inés</span></a><a href="#ket"><span>KET</span></a><a class="nav-arrow" href="#top"><span>&#8593;&#8593; Inicio</span></a></div><div class="mini-col"><a href="#raquel"><span>Raquel</span></a><a href="#alina"><span>Alina</span></a><a class="nav-arrow" href="#raquel"><span>&#8593; Anterior</span></a></div><div class="mini-col"><a href="#andrea"><span>Andrea</span></a><a href="#patricio"><span>Patricio</span></a><a class="nav-arrow" href="#ket"><span>&#8595; Siguiente</span></a></div></nav>
+  </section>
+
+  <section class="proposal" id="ket">
+    <div class="hero-image"><img src="assets/ket.jpg" alt="KET o un hábitat propio"></div>
+    <div class="proposal-head">
+      <div><h2>KET o un hábitat propio</h2><div class="artist">Sophie Núñez / Amaya Goñi</div></div>
+      <div class="tags"><span class="tag"><span>Catalunya / Roca Umbert</span></span><span class="tag"><span>Circo contemporáneo</span></span><span class="tag"><span>Amistad, pop y cuerpo-pantalla</span></span></div>
+    </div>
+    <div class="body">
+      <div>
+        <p>APS / Amigues Per Sempre pregunta si colocar la amistad en el centro de la vida puede responder al malestar contemporáneo. La propuesta mezcla trapecio compartido, escritura en vivo, circo proyectado sobre la piel, imaginario pop, memes, vocoder y participación.</p>
+        <p>Semolina pidió darle prioridad. Olga la relaciona con Impuls de Circ y APCC, y también con una posible alianza con Sandra de Roca Umbert.</p>
+        <p class="take">Texto provisional de recomendación: me interesa porque combina humor, ternura, circo híbrido, escritura en directo y una estética digital-pop. Tiene algo divertido y contemplativo a la vez.</p>
+      </div>
+      <div>
+        <div class="materials-title">Materiales encontrados</div>
+        <div class="links">
+          <a href="materials/ket-dossier.pdf"><span><strong>Dossier</strong> / KET</span></a>
+          <a href="materials/ket-rider.pdf"><span><strong>Rider</strong> / provisional</span></a>
+          <a href="https://youtu.be/VlAyHENt1-s"><span><strong>Video collage</strong> / escénico</span></a>
+          <a href="https://youtu.be/DKHo8zUIpyI"><span><strong>Pase</strong> / Roca Umbert</span></a>
+          <a href="https://youtu.be/nA_UdtEZwpE"><span><strong>Zapatillas luminosas</strong> / iniciático</span></a>
+          <a href="https://drive.google.com/drive/folders/18EvuC5btKJzbErQhXI6LkRIcc64Zzd3d?usp=drive_link"><span><strong>Material gráfico</strong> / Drive</span></a>
+        </div>
+        <div class="contact-block"><div class="contact-title">Contacto y enlaces</div><div class="contact-links">
+          <a href="https://ketounhabitatpropio.hotglue.me/"><em>Web KET</em></a>
+          <a href="https://www.instagram.com/ket_ounhabitatpropio/"><em>@ket_ounhabitatpropio</em></a>
+          <a href="tel:+34671776048"><em>Amaya / +34 671 77 60 48</em></a>
+          <a href="tel:+34654746397"><em>Sofía / +34 654 74 63 97</em></a>
+          <a href="mailto:sarisa@rocaumbert.cat"><em>Sandra Arisa / Roca Umbert</em></a>
+          <a href="https://mail.google.com/mail/#all/19d55bee78ebdf4a"><em>Correo original</em></a>
+        </div></div>
+      </div>
+    </div>
+    <nav class="mini-nav"><div class="mini-col"><a href="#ines"><span>Inés</span></a><a href="#ket"><span>KET</span></a><a class="nav-arrow" href="#top"><span>&#8593;&#8593; Inicio</span></a></div><div class="mini-col"><a href="#raquel"><span>Raquel</span></a><a href="#alina"><span>Alina</span></a><a class="nav-arrow" href="#andrea"><span>&#8593; Anterior</span></a></div><div class="mini-col"><a href="#andrea"><span>Andrea</span></a><a href="#patricio"><span>Patricio</span></a><a class="nav-arrow" href="#alina"><span>&#8595; Siguiente</span></a></div></nav>
+  </section>
+
+  <section class="proposal" id="alina">
+    <div class="hero-image"><img src="assets/alina.jpg" alt="The Book of Sand - Alina Sokulska"></div>
+    <div class="proposal-head">
+      <div><h2>research the f*ck out of it</h2><div class="artist">Alina Sokulska / the book of sand</div></div>
+      <div class="tags"><span class="tag"><span>Barcelona / Catalunya</span></span><span class="tag"><span>Conferencia performativa</span></span><span class="tag"><span>Archivo, exilio y ADN</span></span></div>
+    </div>
+    <div class="body">
+      <div>
+        <p>Modulo de conferencia performativa dentro del proyecto paraguas the book of sand. La pieza usa discurso, coreografía, danza y pintura proyectada para trabajar identidad, desplazamiento, exilio, acumulación de información, ADN y el límite en que el conocimiento empieza a autoborrarse.</p>
+        <p>Alina ha sido residente en Graner y tiene residencias en Fabra i Coats y O Espaço do Tempo. Propone adaptar la pieza al Antic y estrenarla en 2027.</p>
+        <p class="take">Texto provisional de recomendación: me interesa por la densidad conceptual y por cómo convierte la investigación en dispositivo performativo. Conviene aclarar si se propone estreno, coproducción o residencia con presentación.</p>
+      </div>
+      <div>
+        <div class="materials-title">Materiales encontrados</div>
+        <div class="links">
+          <a href="materials/alina-research-dossier.pdf"><span><strong>Dossier</strong> / research the f*ck out</span></a>
+          <a href="https://vimeo.com/1137054299/4a8600cc6c"><span><strong>Muestra proceso</strong> / Graner</span></a>
+          <a href="https://vimeo.com/1143813122"><span><strong>Presentación</strong> / proyecto paraguas</span></a>
+          <a href="https://alinasokulska.com/thebookofsand/"><span><strong>Web</strong> / the book of sand</span></a>
+          <a href="https://alinasokulska.com/"><span><strong>Web</strong> / Alina</span></a>
+          <a href="https://drive.google.com/file/d/1rI2Tllgaw9jO5dUyUYY6lsA8z9iYr2Xk/view?usp=sharing"><span><strong>CV completo</strong> / Drive</span></a>
+        </div>
+        <div class="contact-block"><div class="contact-title">Contacto y enlaces</div><div class="contact-links">
+          <a href="mailto:alinasoku@gmail.com"><em>alinasoku@gmail.com</em></a>
+          <a href="mailto:hello@alinasokulska.com"><em>hello@alinasokulska.com</em></a>
+          <a href="tel:+34603595439"><em>+34 603 595 439</em></a>
+          <a href="https://www.instagram.com/alina_sokulska"><em>@alina_sokulska</em></a>
+          <a href="https://mail.google.com/mail/#all/19e3a1e48f982ca6"><em>Correo original</em></a>
+        </div></div>
+      </div>
+    </div>
+    <nav class="mini-nav"><div class="mini-col"><a href="#ines"><span>Inés</span></a><a href="#ket"><span>KET</span></a><a class="nav-arrow" href="#top"><span>&#8593;&#8593; Inicio</span></a></div><div class="mini-col"><a href="#raquel"><span>Raquel</span></a><a href="#alina"><span>Alina</span></a><a class="nav-arrow" href="#ket"><span>&#8593; Anterior</span></a></div><div class="mini-col"><a href="#andrea"><span>Andrea</span></a><a href="#patricio"><span>Patricio</span></a><a class="nav-arrow" href="#patricio"><span>&#8595; Siguiente</span></a></div></nav>
+  </section>
+
+  <section class="proposal" id="patricio">
+    <div class="hero-image"><img src="assets/patricio.jpg" alt="De cómo aprender a estar solx - Patricio Suárez"></div>
+    <div class="proposal-head">
+      <div><h2>De cómo aprender a estar solx</h2><div class="artist">Patricio Suárez / DECAES</div></div>
+      <div class="tags"><span class="tag"><span>Mallorca / Argentina</span></span><span class="tag"><span>Artes vivas</span></span><span class="tag"><span>Teatro, danza e instalación</span></span></div>
+    </div>
+    <div class="body">
+      <div>
+        <p>Obra de artes vivas y manual de supervivencia que critica el individualismo neoliberal y el aislamiento contemporáneo. Una performer encerrada en su apartamento intenta justificar su soledad y termina destruyendo su vivienda.</p>
+        <p>La pieza cruza teatro contemporáneo, danza, instalación, artes visuales y humor político. Tiene dirección y espacio escénico de Patricio Suárez, texto de Rafael Casañ e interpretación de Liza Karen Taylor.</p>
+        <p class="take">Texto provisional de recomendación: me interesa por el cruce entre cuerpo, instalación y crítica al modo de vida neoliberal. Hay que valorar si el peso textual encaja con la línea que queremos defender.</p>
+      </div>
+      <div>
+        <div class="materials-title">Materiales encontrados</div>
+        <div class="links">
+          <a href="https://youtu.be/jtgc5hFt3V8"><span><strong>Video</strong> / apertura residencia</span></a>
+          <a href="materials/patricio-decaes-ficha-menorca.pdf"><span><strong>Ficha</strong> / programa Menorca</span></a>
+          <a href="https://www.youtube.com/watch?v=jKFlH7kb19M"><span><strong>Teaser</strong> / Menorca</span></a>
+          <a href="https://www.alternativateatral.com/obra97362-de-como-aprender-a-estar-solx"><span><strong>Ficha pública</strong> / Alternativa</span></a>
+          <a href="https://www.pagina12.com.ar/847659-de-como-aprender-a-estar-solx-decaes-danza-contra-el-salvese"><span><strong>Artículo</strong> / Página12</span></a>
+          <a href="https://lobosuelto.com/un-sistema-de-islas-desiertas-es-un-sistema-imposible-entrevista-a-patricio-suarez-por-juan-manuel-sodo/"><span><strong>Entrevista</strong> / Lobo Suelto</span></a>
+        </div>
+        <div class="contact-block"><div class="contact-title">Contacto y enlaces</div><div class="contact-links">
+          <a href="mailto:patriciodiegosuarez@gmail.com"><em>Patricio / email</em></a>
+          <a href="https://mail.google.com/mail/#all/19bdc34a7285ed79"><em>Correo original</em></a>
+          <span><em>Dossier original pendiente</em></span>
+        </div></div>
+      </div>
+    </div>
+    <nav class="mini-nav"><div class="mini-col"><a href="#ines"><span>Inés</span></a><a href="#ket"><span>KET</span></a><a class="nav-arrow" href="#top"><span>&#8593;&#8593; Inicio</span></a></div><div class="mini-col"><a href="#raquel"><span>Raquel</span></a><a href="#alina"><span>Alina</span></a><a class="nav-arrow" href="#alina"><span>&#8593; Anterior</span></a></div><div class="mini-col"><a href="#andrea"><span>Andrea</span></a><a href="#patricio"><span>Patricio</span></a><a class="nav-arrow" href="#top"><span>&#8595; Siguiente</span></a></div></nav>
+  </section>
+
+  <footer class="footer"><div>ANTIC TEATRE / propuestas desde Catalunya</div><div>Preparado por Adrián Vega / junio 2026</div></footer>
+</main>
+</body>
+</html>
+
