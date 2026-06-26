@@ -1,4 +1,4 @@
-# Recomendaciones Antic / Propuestas desde Catalunya
+# Propuestas para Cataluña, volumen 1
 
 Web interna de trabajo para revisar propuestas locales con afinidad Antic Teatre.
 
